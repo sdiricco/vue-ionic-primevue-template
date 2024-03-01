@@ -1,6 +1,8 @@
-$primaryColor: #3B82F6 !default;
-$primaryDarkColor: #2563eb !default;
-$primaryDarkerColor: #1D4ED8 !default;
+@import '../../../../../variables.scss';
+
+$primaryColor: $appPrimaryColor !default;
+$primaryDarkColor: $appPrimaryDarkColor !default;
+$primaryDarkerColor: $appPrimaryDarkerColor !default;
 $primaryTextColor: #ffffff !default;
 
 $highlightBg: #EFF6FF !default;

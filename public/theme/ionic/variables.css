@@ -5,12 +5,12 @@ http://ionicframework.com/docs/theming/ */
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #009765;
-  --ion-color-primary-rgb: 0, 151, 101;
+  --ion-color-primary: #3B82F6;
+  --ion-color-primary-rgb: 59, 130, 246;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #009765;
-  --ion-color-primary-tint: #009765;
+  --ion-color-primary-shade: #3B82F6;
+  --ion-color-primary-tint: #3B82F6;
 
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
@@ -83,12 +83,12 @@ http://ionicframework.com/docs/theming/ */
    */
 
   body.dark {
-    --ion-color-primary: #009765;
-    --ion-color-primary-rgb: 66,140,255;
+    --ion-color-primary: #3B82F6;
+    --ion-color-primary-rgb: 59, 130, 246;
     --ion-color-primary-contrast: #ffffff;
     --ion-color-primary-contrast-rgb: 255,255,255;
-    --ion-color-primary-shade: #009765;
-    --ion-color-primary-tint: #009765;
+    --ion-color-primary-shade: #3B82F6;
+    --ion-color-primary-tint: #3B82F6;
 
     --ion-color-secondary: #50c8ff;
     --ion-color-secondary-rgb: 80,200,255;
@@ -234,8 +234,12 @@ http://ionicframework.com/docs/theming/ */
     --ion-card-background: #1e1e1e;
   }
 
+
 html {
   /* For more information on dynamic font scaling, visit the documentation: 
   https://ionicframework.com/docs/layout/dynamic-font-scaling */
   --ion-dynamic-font: var(--ion-default-dynamic-font);
+  --ion-font-family: "Inter var", sans-serif !important;
+  --ion-default-font: "Inter var", sans-serif !important
+
 }

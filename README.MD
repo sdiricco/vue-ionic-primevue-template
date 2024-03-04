@@ -83,3 +83,7 @@ const {initializeTheme} = useTheme()
 initializeTheme();
 </script>
 ```
+
+## todo
+
+- talk about font, font-face, index css etc... and why

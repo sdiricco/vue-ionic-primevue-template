@@ -40,7 +40,7 @@ const counter = useCounterStore();
 const { count } = storeToRefs(counter);
 const { increment, decrement } = counter;
 
-const {isDark, toggleTheme, initializeTheme} = useTheme();
+const {isDark, toggleTheme} = useTheme();
 
 
 function onchange(){

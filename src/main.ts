@@ -7,14 +7,16 @@ import IonicImporter from "./plugins/ionic";
 import PrimeVueImporter from "./plugins/primevue";
 import { Icon } from '@iconify/vue';
 
+
+
 const pinia = createPinia()
 
 const app = createApp(App)
   .use(pinia)
   .use(PrimeVue, { ripple: true })
+  .use(PrimeVueImporter)
   .use(IonicImporter)
   .use(router)
-  .use(PrimeVueImporter);
 
 app.component("Icon", Icon)
   

@@ -6,7 +6,6 @@ import type { App } from "vue";
 /*****************************************************************************/
 import "primeicons/primeicons.css";
 import 'primevue/resources/primevue.min.css'; //core css
-import "@/assets/primevue-sass-theme-3.49.1/themes/aura/aura-light/blue/theme.scss";
 import "/node_modules/primeflex/primeflex.css";
 
 

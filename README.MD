@@ -84,6 +84,41 @@ initializeTheme();
 </script>
 ```
 
-## todo
+## About fonts
 
-- talk about font, font-face, index css etc... and why
+Do not use fonts from primevue theme, so delete `font-face` and related imports if needed from prime vue scss/css file.
+Create a `index.css` with `font-face` rules
+
+```css
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("./fonts/Inter-roman.var.woff2?v=3.19") format("woff2");
+}
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("./fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
+}
+```
+
+and then link to `html` file as css asset.
+
+Now link the local font to ionic theme, `variables.css`
+
+```css
+html {
+  /* For more information on dynamic font scaling, visit the documentation: 
+  https://ionicframework.com/docs/layout/dynamic-font-scaling */
+  --ion-dynamic-font: var(--ion-default-dynamic-font);
+  --ion-font-family: "Inter var", sans-serif !important;
+  --ion-default-font: "Inter var", sans-serif !important
+
+}
+```

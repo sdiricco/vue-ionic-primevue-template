@@ -1,5 +1,70 @@
 # Theming
 
+## Prerequisites
+
+- Install Android studio: See [capacitor guide](https://capacitorjs.com/docs/getting-started/environment-setup). If you use linux install Android studio from  [snap store](https://snapcraft.io/android-studio) and then install SDK. To install SDK, go to `Tools/SDK Manager` and choose `Edit` from Android SDK Location panel, then install SDK packages.
+- Install `ionic` globally
+```sh
+npm install -g @ionic/cli
+```
+- Set `CAPACITOR_ANDROID_STUDIO_PATH` environment variable
+
+From terminal launch `which android-studio`, you should see the path of android studio.
+
+```sh
+which android-studio
+
+/snap/bin/android-studio
+```
+
+Now set the right path
+
+```sh
+export CAPACITOR_ANDROID_STUDIO_PATH=/snap/bin/android-studio
+```
+
+## Installation
+Use `npm` and install all packages.
+
+```sh
+npm i
+```
+
+## Build
+
+Follow official guide, [Deploying to iOS and Android](https://ionicframework.com/docs/vue/your-first-app/deploying-mobile).
+
+Build application with: 
+
+```sh
+ionic build
+```
+
+Add android project 
+
+```sh
+ionic cap add android
+```
+
+Every time you perform a build (e.g. ionic build) that updates your web directory (default: build), you'll need to copy those changes into your native projects:
+
+```sh
+ionic cap copy
+```
+
+Note: After making updates to the native portion of the code (such as adding a new plugin), use the sync command:
+
+
+```sh
+ionic cap sync
+```
+
+## Open Android project with android studio
+
+```sh
+ionic cap open android
+```
+
 ## Setup 
 
 Place theme under `public` folder. You have to put ionic `variables.css` and primevue `theme.css` into `public` folder and link them to `index.html` file.

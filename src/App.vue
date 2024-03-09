@@ -1,5 +1,5 @@
 <template>
-  <ion-app>
+  <ion-app class="app">
     <ion-router-outlet />
   </ion-app>
 </template>
@@ -10,3 +10,9 @@ import useTheme from './composables/useTheme';
 const {initializeTheme} = useTheme()
 initializeTheme();
 </script>
+
+<style scoped>
+.app{
+  margin-top: 48px;
+}
+</style>

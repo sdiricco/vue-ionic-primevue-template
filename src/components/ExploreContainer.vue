@@ -1,6 +1,6 @@
 <template>
   <div class="p-6 text-color">
-    <Card>
+    <Card class="mb-6">
       <template #content>
         <div class="flex align-items-center justify-content-center pb-6">
           <span class="mr-2">Toggle theme</span>
@@ -28,10 +28,34 @@
         </div>
       </template>
     </Card>
+
+    <Card class="mb-6">
+      <template #header>
+        <div class="text-xl p-4">PrimeVue basic form</div>
+      </template>
+      <template #content>
+        <InputText aria-describedby="username-help" class="block w-full mb-6" />
+      </template>
+
+    </Card>
+
+    <Card>
+      <template #header>
+        <div class="text-xl p-4">Ionic basic form</div>
+      </template>
+      <template #content>
+
+        <ion-input label="Outline input" label-placement="floating" fill="outline" placeholder="Enter text"
+          class="mb-6"></ion-input>
+      </template>
+
+    </Card>
   </div>
 </template>
 
 <script setup lang="ts">
+import { IonInput } from '@ionic/vue';
+
 import { useCounterStore } from "@/store/main";
 import { storeToRefs } from "pinia";
 import useTheme from "@/composables/useTheme";
@@ -40,10 +64,10 @@ const counter = useCounterStore();
 const { count } = storeToRefs(counter);
 const { increment, decrement } = counter;
 
-const {isDark, toggleTheme} = useTheme();
+const { isDark, toggleTheme } = useTheme();
 
 
-function onchange(){
+function onchange() {
   toggleTheme()
 }
 

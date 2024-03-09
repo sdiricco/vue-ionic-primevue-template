@@ -59,6 +59,7 @@ Note: After making updates to the native portion of the code (such as adding a n
 ionic cap sync
 ```
 
+
 ## Open Android project with android studio
 
 ```sh
@@ -93,7 +94,7 @@ Now, **remove css files** from ionic in order to apply css styles from primevue.
 
 ## Theme toggle
 
-You have to change both ionic and primevue theme
+You have to change ionic, primevue and status bar theme. 
 
 ```js
 import { watch } from "vue";
@@ -120,7 +121,7 @@ The composable `useDark` store in `localstorage` the color schema, so you can us
 
 In order to synch both systems (ionic and primevue) I created a composables `useTheme` that resolve this problem for you. You can find an example in `ExploreContainer`. Following code is a basic usage:
 
-```js
+```html
 <template>
   <InputSwitch :model-value="isDark" @update:model-value="toggleTheme" />
 </template>
@@ -133,7 +134,7 @@ const {isDark, toggleTheme} = useTheme();
 
 You have also to initialize themes when app start, in `App.vue`
 
-```js
+```html
 //app.vue
 <template>
   <ion-app>
